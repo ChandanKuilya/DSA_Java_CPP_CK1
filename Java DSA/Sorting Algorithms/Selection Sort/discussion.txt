@@ -1,0 +1,45 @@
+Key Points in Code:
+The outer loop (i) iterates from 0 to n-1, representing the boundary between the sorted and unsorted portions.
+The inner loop (j) starts from i+1 to find the minimum element in the unsorted portion.
+The swap occurs only if a smaller element is found (minIndex != i), minimizing unnecessary swaps.
+Unlike Bubble Sort, Selection Sort doesn’t use a flag to stop early since it always performs n-1 passes.
+
+Time Complexity
+Selection Sort’s time complexity is determined by the number of comparisons and swaps:Worst Case (O(n²)):Occurs regardless of the input (e.g., reverse sorted [5, 4, 3, 2, 1]).
+For an array of size n:First pass: n-1 comparisons to find the minimum.
+
+Second pass: n-2 comparisons.
+...
+Last pass: 1 comparison.
+
+Total comparisons: (n-1) + (n-2) + ... + 1 = n(n-1)/2 ≈ O(n²).
+Swaps: At most one swap per pass, so O(n) swaps.
+
+Best Case (O(n²)):Even if the array is already sorted (e.g., [1, 2, 3, 4, 5]), Selection Sort still performs all comparisons to find the minimum in each pass.
+Total comparisons: O(n²).
+Swaps: O(1) (no swaps needed if already sorted).
+
+Average Case (O(n²)):For a randomly ordered array, the number of comparisons remains n(n-1)/2 ≈ O(n²).
+Swaps are fewer than Bubble Sort but don’t affect the asymptotic complexity.
+
+Space ComplexityO(1) (In-place sorting):Selection Sort is an in-place algorithm, requiring only a constant amount of extra space (e.g., for temp, minIndex, and loop variables).
+No additional arrays are needed, unlike algorithms like Merge Sort.
+
+Advantages and DisadvantagesAdvantages:Simple to implement and understand.
+In-place sorting (minimal memory usage).
+Performs at most O(n) swaps, which is better than Bubble Sort’s O(n²) swaps in the worst case.
+Works well for small datasets or when swap operations are expensive.
+
+Disadvantages:Inefficient for large datasets due to O(n²) time complexity for comparisons.
+Not adaptive (doesn’t benefit from nearly sorted arrays, unlike Bubble Sort with optimization).
+Not stable (may change the relative order of equal elements).
+
+When to Use Selection Sort
+Use Cases:
+Small datasets where simplicity is prioritized.
+When memory is limited (in-place sorting).
+When the cost of swapping elements is high, as it minimizes swaps compared to Bubble Sort.
+
+Avoid:
+Large datasets or performance-critical applications, where algorithms like Quick Sort or Merge Sort are more efficient.
+
