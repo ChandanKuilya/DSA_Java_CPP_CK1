@@ -1,0 +1,37 @@
+Time Complexity: O(n^2) average case 
+
+| Case        | Comparisons | Swaps  | Time Complexity                |
+| ----------- | ----------- | ------ | ------------------------------ |
+| **Best**    | n-1         | 0      | **O(n)** (optimized with flag) |
+| **Average** | ≈ n²/2      | ≈ n²/4 | **O(n²)**                      |
+| **Worst**   | ≈ n²/2      | ≈ n²/2 | **O(n²)**                      |
+
+
+Space Complexity: O(1)
+Bubble Sort is in-place — it doesn’t use extra memory.
+
+
+
+Advantages and Disadvantages--->
+
+Advantages:
+
+Simple to understand and implement.
+In-place sorting (minimal memory usage).
+Stable sorting algorithm (maintains relative order of equal elements).
+Best case O(n) with optimization.
+
+Disadvantages:
+Inefficient for large datasets due to O(n²) time complexity.
+Rarely used in practice compared to faster algorithms like Quick Sort or Merge Sort.
+
+
+When to Use Bubble Sort?
+Use Cases:
+Educational purposes to teach sorting concepts.
+Small datasets (e.g., < 100 elements) where simplicity is preferred over performance.
+When the array is nearly sorted (best case O(n)).
+
+Avoid:
+Large datasets or performance-critical applications.
+
