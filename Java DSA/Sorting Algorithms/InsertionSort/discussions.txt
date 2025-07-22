@@ -1,0 +1,31 @@
+Characteristics:
+
+
+Time Complexity:
+
+Best: O(n) (already sorted)
+
+Average/Worst: O(n²)
+
+Space Complexity: O(1) (in-place)
+
+Stable Sort: Yes (preserves the order of equal elements)
+
+Adaptive: Yes (fast if the array is nearly sorted)
+
+
+###When to Use Insertion Sort?
+
+Small datasets
+
+Partially sorted arrays or nearly sorted arrays
+
+As part of hybrid algorithms (e.g., Java uses Insertion Sort in TimSort for small partitions)
+
+
+Avoid for:
+
+Large or completely unsorted arrays
+
+Time-critical applications
+
